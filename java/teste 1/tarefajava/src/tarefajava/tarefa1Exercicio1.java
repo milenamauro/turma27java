@@ -1,13 +1,12 @@
+package tarefajava;
 
-public class Tarefa1Exercicio1Java {
+public class Tarefas {
 
-	//Faça um sistema que leia a idade de uma pessoa expressa em anos, 
-	//meses e dias e mostre-a expressa apenas em dias. 
-public class programa{
-	public static void main(string[]args) {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub faça um
+		//sistema que leia a idade de uma pessoa expressa em anos meses e dias e mostre-a expressa apenas em dias. 
 		
 		int anos; meses; dias; idadeEmdias
-		
 		System.out.println ("Entre com anos")
 		anos= entrada.nextInt();
 		
@@ -23,5 +22,4 @@ public class programa{
 	   System.out.print("Idade total em dias = "+IdadeTotalDias+"\n");
 		
 	}
-}
 }
