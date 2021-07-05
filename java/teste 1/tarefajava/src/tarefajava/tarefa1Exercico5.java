@@ -4,23 +4,21 @@ import java.util.Scanner;
 
 public class tarefa1Exercico5 {
 	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
 		
-		double nota1; nota2; not3, mediaFinal
-		Scanner ler = new Scanner (System.in);
-		 
-		 
-		System.out.printf("Qual a nota 1?");
-		nota1=read.nextInt()
-				
-				System.out.printf("Qual a nota 2?");
-		nota2=read.nextInt()
-	 
-				
-				System.out.printf("Qual a nota 3?");
-		nota3=read.nextInt()
-	 
-	              
-				Sytem.out.printf("Media final=((nota1 *2)+ (nota2*3) + (nota3*5))/10 ");
-				
+		int media,n1,n2,n3;
+		
+		System.out.println("Notas do aluno X:");
+		n1 = 2;
+		System.out.println("Nota 1: "+n1);
+		n2 = 3;
+		System.out.println("Nota 2: "+n2);
+		n3 = 5;
+		System.out.println("Nota 3: "+n3);
+		
+		media = n1+n2+n3/3;
+		System.out.println("O aluno, com as respectivas notas: 2 ,3 e 5 teve"+media+" de média");
+	
+		
 	}
 }

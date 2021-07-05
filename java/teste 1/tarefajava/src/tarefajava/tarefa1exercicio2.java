@@ -1,27 +1,20 @@
 package tarefajava;
 
-public class tarefa1exercicio2 {
+import java.util.Scanner;
 
+public class tarefa1exercicio2 {
 	public static void main(String[] args) {
-		int ano=365;
-		int meses=30;
-		int dias
-		int respostaemDias
+		Scanner read = new Scanner(System.in);
 		
+		int dias,meses,anos,idade,idadeemDias;
 		
-		System.out.println("Digite a idade em dias \n");
-		 scanf(dias);
-		 
-		 ano=dias/365;
+		System.out.println("Insira sua idade em dias aqui: \n");
+		idadeemDias = read.nextInt();
 		
-				 System.out.println("\n sua idade em meses é:   ", meses);
-				 
-				 System.out.println("\n sua idade em dias é:   ", meses);
-				 
-				 
+		anos = idadeemDias/365;
+		meses = (idadeemDias%365);
+		dias = (idadeemDias%365)%30;
+		System.out.println("Você tem: "+anos+" anos de idade, "+meses+" meses e "+dias+" dias de vida!");
+		
 	}
-	
-	
-	
-	
 }
