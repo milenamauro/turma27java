@@ -23,7 +23,7 @@ public class exercicio4tarefa2 {
 		
 		media /= 10;
 		
-		for (int i = 0; i < 10; i++){
+		for (int i = 0; i < 10; i++){ 
 			if (numeros[i] == maiorValor){
 				contador++;
 			}

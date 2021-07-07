@@ -1,4 +1,4 @@
-package tarefa4exercicio1;
+package tarefajava;
 
 import java.util.Scanner;
 
