@@ -2,7 +2,7 @@ package entidades;
 
 public class ContaPoupanca extends Conta {
     
-	  private int diaAniversarioPoupanca
+	  private int diaAniversarioPoupanca;
 
 	public ContaPoupanca(int numero, String nomeCliente, int diaAniversarioPoupanca) {
 		super(numero, nomeCliente);
