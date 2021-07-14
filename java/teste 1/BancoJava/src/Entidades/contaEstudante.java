@@ -4,7 +4,6 @@ import javax.swing.*;
 
 public class contaEstudante extends Conta {
 	private double limite = 5000;
-	private int qtdMovimentos;
 
 	public contaEstudante(int numero, String nomeCliente) {
 		super(numero, nomeCliente);

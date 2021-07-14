@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
 public class ContaEspecial extends Conta {
 	
 	private double limite;
-	private int qtdMovimentos;
 	
 	public ContaEspecial(int numero, String nomeCliente, double limite) {
 		super(numero, nomeCliente);

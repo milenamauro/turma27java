@@ -1,12 +1,12 @@
 package Entidades;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public abstract class Conta {
 	private int numero;
 	private String nomeCliente;
 	protected double saldo;
-	
+	protected int qtdMovimentos = 0;
 	public Conta(int numero, String nomeCliente) {
 		super();
 		this.numero = numero;
@@ -24,12 +24,20 @@ public abstract class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
+	
+	public int getQtdMovimentos() {
+		return qtdMovimentos;
+	}
+	public void setQtdMovimentos(int qtdMovimentos) {
+		this.qtdMovimentos = qtdMovimentos;
+	}
 	public void credito(double valorCredito) {
 		if(valorCredito<=0) {
 			JOptionPane.showMessageDialog(null, "Valor para credito invalido!");
 		}else {
 			this.saldo = this.saldo + valorCredito;
 			JOptionPane.showMessageDialog(null, "Operação realizada com sucesso!\n Seu novo saldo é: R$"+this.saldo);
+			this.qtdMovimentos++;
 		}
 		
 	}
@@ -41,6 +49,7 @@ public abstract class Conta {
 		}else {
 			this.saldo = this.saldo-valorDebito;
 			JOptionPane.showMessageDialog(null,"Operação realizada com sucesso!\nSeu novo saldo é de: R$"+this.saldo);
+			this.qtdMovimentos++;
 		}
 		
 		
