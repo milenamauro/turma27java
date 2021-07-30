@@ -11,11 +11,10 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 
 	
 
-	public List<Categoria> FindAllByDescricaoContaingIgnoreCase(String descricao);
+	public List<Categoria> findAllByDescricaoContaingIgnoreCase(String descricao);
 
 	
 	
 	
 	
 }
-8
