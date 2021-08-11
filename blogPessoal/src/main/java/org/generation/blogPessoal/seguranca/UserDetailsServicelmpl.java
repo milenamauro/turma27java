@@ -17,7 +17,8 @@ public class UserDetailsServicelmpl implements UserDetailsService {
 	   private UsuarioRepository userRepository;
         
         
-        @Override UserDetails loadUserByUsername (String userName) {
+        @Override
+		public UserDetails loadUserByUsername (String userName) {
         	Optional<Usuario> user = userRepository.findByUsuario(userName);
         	user.orElseThrow(() -> new UsernameNotFoundException(userName +"not found."));
         	

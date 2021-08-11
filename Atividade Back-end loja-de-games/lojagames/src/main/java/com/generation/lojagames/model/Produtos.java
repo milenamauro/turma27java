@@ -1,12 +1,16 @@
 package com.generation.lojagames.model;
 
+ 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
+ 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -24,14 +28,30 @@ public class Produtos {
 	@Size (min=1, max=100)
 	private String nome;
 	
-	@Min(1)
+	@NotNull
+	@Positive
 	private double preco;
 	
-	private boolean disponivel;
-	
-    @ManyToOne            //anotacao que vai relacionar isso. O ultimo nome da anotacao referece a quantidade de dados que estou recebendo
-	@JsonIgnoreProperties("Produtos")
-    private Categoria categoria; //o tipo do dado deve ser o mesmo nome da classse que eu queto relacionar
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+			private Categoria categoria;
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+			private Usuario usuario;
+
 	
 	
 	
@@ -59,21 +79,12 @@ public class Produtos {
 		this.nome = nome;
 	}
 
-	public double getPreco() {
-		return preco;
-	}
-
+ 
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
 
-	public boolean isDisponivel() {
-		return disponivel;
-	}
-
-	public void setDisponivel(boolean disponivel) {
-		this.disponivel = disponivel;
-	}
+	 
 	
 	
 }
