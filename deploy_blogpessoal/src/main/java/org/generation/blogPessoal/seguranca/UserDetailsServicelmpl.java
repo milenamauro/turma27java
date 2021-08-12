@@ -3,7 +3,7 @@ package org.generation.blogPessoal.seguranca;
 import java.util.Optional;
 
 import org.generation.blogPessoal.model.Usuario;
-import org.generation.blogPessoal.repository.UsuarioRepositoryTest;
+import org.generation.blogPessoal.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServicelmpl implements UserDetailsService {
 	
         @Autowired
-	   private UsuarioRepositoryTest userRepository;
+	   private UsuarioRepository userRepository;
         
         
         @Override

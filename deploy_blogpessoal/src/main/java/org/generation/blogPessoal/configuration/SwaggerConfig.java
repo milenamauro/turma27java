@@ -19,7 +19,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.generation.blogPessoal.controller"))
+				.apis(RequestHandlerSelectors.basePackage("org.generation.blogPessoal.controller"))
 				.paths(PathSelectors.any())
 				.build().apiInfo(metadata())
 				.useDefaultResponseMessages(false)
@@ -40,7 +40,7 @@ public class SwaggerConfig {
 	}
 
 	private static Contact contact() {
-		return new Contact("Caio Lima", "https://github.com/milenamauro", "milena.93@hotmail.com");
+		return new Contact("Milena Mauro", "https://github.com/milenamauro", "milena.93@hotmail.com");
 	}
 
 	private static List<Response> responseMessage() {
